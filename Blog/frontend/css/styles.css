@@ -1,0 +1,279 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: #E0E0E0;
+  }
+  
+  .header-logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+    transition: transform 0.3s;
+    font-weight: 700;
+  }
+  
+  a:hover {
+    transform: scale(1.1);
+  }
+  
+  nav ul {
+    margin-right: 5%;
+  }
+  
+  li {
+    list-style: none;
+    display: inline;
+    padding: 15px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 0.7rem;
+  }
+  
+  .post-container {
+    margin-top: 100px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 232, 178, 0.126);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #555;
+    transition: transform 0.2s;
+  }
+  
+  .close:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 550px) {
+    nav ul {
+      padding: 5px;
+    }
+  
+    header {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .post-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Body background color */
+  body {
+    background-color: #121212;
+    color: #E0E0E0;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #1F1F1F;
+  }
+  
+  nav a {
+    color: #BB86FC; /* Light purple for links */
+  }
+  
+  nav a:hover {
+    color: #03DAC6; /* Teal color for link hover */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1F1F1F;
+    color: #E0E0E0;
+    text-align:center;
+    margin-bottom: 200px;
+    padding: 10px;
+  }
+  
+  /* Contact Modal */
+  #contactModal {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #333;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #03DAC6;
+    color: #121212;
+  }
+  
+  /* Section Backgrounds */
+  section {
+    background-color: #222222;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Links */
+  a {
+    color: #BB86FC;
+  }
+  
+  a:hover {
+    color: #03DAC6;
+  }
+  
+  /* Create Post Button */
+  #createPostBtn {
+    background-color: #03DAC6; /* Teal primary color */
+    color: #121212; /* Dark text on light button */
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+  }
+  
+  #createPostBtn:hover {
+    background-color: #BB86FC; /* Light purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  #createPostBtn:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Form Container Styles */
+  #postForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form elements */
+  }
+  
+  /* Upper Div for Title and Category */
+  .upper {
+    display: flex;
+    justify-content: space-between; /* Distribute title and category */
+    gap: 10px; 
+  }
+  
+  /* Title and Category Input Fields */
+  .title, .category1 {
+    flex: 1; /* Equal width for title and category */
+  }
+  
+  .postTitle, .postCategory {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #5b3800;
+    border-radius: 5px;
+  }
+  
+  /* Description Textarea */
+  .postDescription {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #700000;
+    border-radius: 5px;
+    height: 100px; 
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  /* Post Button */
+  .postSubmitBtn {
+    background-color: #03DAC6; /* Teal/green color */
+    color: rgb(226, 149, 149);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .postSubmitBtn:hover {
+    background-color: #018786; /* Darker shade on hover */
+  }
+  
+  /* Post Heading Label */
+  .postheading {
+    display: block; /* Makes the label appear on its own line */
+    margin-bottom: 5px; /* Adds space between label and input */
+    font-weight: bold;
+  }
+  
+  /* Blog Post Styles */
+  .post { 
+    background-color: #222; /* Dark background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    position: relative; /* For positioning the category tag */
+    overflow: hidden; /* To contain the animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border: 2px}
+    
+    .post-box {
+        padding: 20px;;
+        border-radius: 1rem;
+        border-color: #03DAC6; /* Teal border color */
+        border-width: 1px;   /* Adjust border thickness as needed */
+        border-style: solid;
+        box-shadow: wheat; /* You can also use dashed, dotted, etc. */
+      }
